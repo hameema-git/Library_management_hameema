@@ -1,0 +1,30 @@
+{%load static %}
+<body style="background-image:url('/static/images/backlog2.jpg'); background-size:cover;">
+
+<div style="width:480px;height:600px;border:2px solid white;position:absolute;left:40px;top:40px;"><center>
+    <form action="" method= "POST" style="color:white;font-size:23px;">
+        {% csrf_token %}
+         <p style="font-size:40px;color:;font-weight:bold;">New Registration</p>
+
+        {% comment %} <label>Name:</label>
+        <input type="text" name='name'required>
+        <br><br>
+        <label>Age:</label>
+        <input type="text" name='age'required>
+        <br><br>
+        <label>Gender:</label>
+       <input type="radio" id="male" name="gender" value="Male" required><label style="font-size:20px;"> Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required><label style="font-size:20px;">Female</label>
+        <br><br>
+        <label>username</label>
+        <input type="text" name='username'required><br><br>
+        <label>Password</label>
+        <input type="Password" name='Password'required><br><br>
+        <button type="reset">reset</button>
+        <button type="submit">submit</button> {% endcomment %} 
+        {{ form.as_p }}
+        <button type="reset"style="background-color:yellow;color:black;font-weight:bold;font-size:20px;width:90px;height:40px;border-radius:20px;">Reset</button>
+        <button type="submit" style="background-color:yellow;color:black;font-weight:bold;font-size:20px;width:100px;height:40px;border-radius:20px;">Sign Up</button>
+    </form>
+</center>
+</div>

@@ -1,0 +1,22 @@
+{%load static %}
+<body style="background-image:url('/static/images/backlog2.jpg'); background-size:cover;">
+<div style="width:600px;height:300px;border:2px solid white;">
+    <center>
+    <p style="font-weight:bold;font-size:35px;color:white;">LOGIN</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3 style='color:red;'>{{msg}}</h3>
+        <label style="font-size:30px;color:white;">Username:</label>
+        <input type="text" style="width:250px;height:30px;" name='username' required>
+        <br><br>
+        <label style="font-size:30px;color:white;">Password:</label>
+        <input type="password" style="width:250px;height:30px;" name='password' required>
+        <br><br>
+        <button type="submit" style="width:100px;height:35px;font-size:25px;font-weight:bold;border-radius:20px;color:blue;">login</button>
+        {% comment %} {{ form.as_p }}
+        <button type="submit">Login</button> {% endcomment %}
+    </form>
+</center>
+    </div>
+    
+</body>

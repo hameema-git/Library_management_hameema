@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block title %}sbook{% endblock %}
+    {% block content %}
+    {% comment %} <div style="width:200px;height:125px;background-color:brown;position:absolute;left:550px;bottom:189px;border:2px solid black;border-radius:20px;">
+    <center><a href="#"  style="text-decoration:none;color:darkcyan;font-weight:bold;font-size:40px;font-family:cursive;">View Books</a></center></div> {% endcomment %}
+    <div style="width:100px;height:35px;background-color:brown;position:absolute;left:1000px;bottom:389px;border:2px solid black;border-radius:20px;">
+        <center><a href="{% url 'pg3' %}"  style="text-decoration:none;font-size:20px;color:#549467;font-weight:bold;font-family:cursive;">Logout</a></center></div>
+        <div style="width:100px;height:35px;background-color:brown;position:absolute;left:1150px;bottom:389px;border:2px solid black;border-radius:20px;">
+          <center><a href="{% url 'pg1' %}"  style="text-decoration:none;font-size:20px;color:#549467;font-weight:bold;font-family:cursive;">Back</a></center></div>
+       
+        <h2 style="font-family:cursive;color:#549467;position:absolute;left:250px;font-weight:bold;">Books Avilable</h2>
+    <table class="table" style="width:800px;position:absolute;top:200px;left:20px;border:3px solid brown;">
+        <thead>
+          <tr>
+            <th scope="col">SL NO:</th>
+            <th scope="col">NAME</th>
+            <th scope="col">AUTHOR</th>
+            <th scope="col">CATEGORY</th>
+            <th scope="col">LANGUAGE</th>
+            <th scope="col">RATING</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for i in books %}
+       
+          <tr>
+            <td>{{i.id}}</td>
+            <td> {{i.name}}</td>
+            <td>{{i.author}}</td>
+            <td>{{i.category}}</td>
+            <td>{{i.language}}</td>
+            <td>{{i.rating}}</td>
+          </tr>
+          {% endfor %}
+    </tbody>
+</table>
+        {% endblock %}

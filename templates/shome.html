@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}shome{% endblock %}
+    {% block content %}
+    <h2 style="position:absolute;left:700px; top:300px;color:#549467;">"Hai {{username}} <br>Welcome to the world of books.."</h2>
+    <div style="width:100px;height:35px;background-color:brown;position:absolute;left:1000px;bottom:389px;border:2px solid black;border-radius:20px;">
+        <center><a href="{% url 'pg2' %}" style="text-decoration:none;font-size:20px;color:#549467;font-weight:bold;font-family:cursive;">Books</a></center></div>
+        <div style="width:100px;height:35px;background-color:brown;position:absolute;left:1150px;bottom:389px;border:2px solid black;border-radius:20px;">
+            <center><a href="{% url 'pg3'%}"  style="text-decoration:none;font-size:20px;color:#549467;font-weight:bold;font-family:cursive;">Logout</a></center></div>
+            
+    {% comment %} <div style="width:200px;height:125px;background-color:brown;position:absolute;left:550px;bottom:189px;border:2px solid black;border-radius:20px;">
+        <center><a href="#"  style="text-decoration:none;color:darkcyan;font-weight:bold;font-size:40px;font-family:cursive;">View Books</a></center></div> {% endcomment %}
+        <img src='{% static '/images/book12.webp' %}' style="height:440px;width:400px;position:absolute;right:800px;top:150px;">
+        {% endblock %}
+    
